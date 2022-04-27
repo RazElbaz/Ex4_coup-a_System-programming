@@ -14,6 +14,5 @@ namespace coup{
         vector<string> players();
         string winner();
         string turn();
-        void addPlayer();
     };
 }
