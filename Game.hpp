@@ -1,16 +1,19 @@
-#include "Player.h"
+#include "Player.hpp"
 #include "vector"
 #include "string"
 using namespace std;
+#include <iostream>
 namespace coup{
     class Game{
     public:
+        Game(){}
         Player Winner;
         std::vector<Player> Players;
         int Turn;
-
-        vector<Players> players();
+        ~Game(){}
+        vector<string> players();
         string winner();
         string turn();
+        void addPlayer();
     };
 }
