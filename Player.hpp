@@ -1,26 +1,20 @@
 #include "Game.hpp"
-#inclide <string>
-#include <iostream>
+#include <string>
 using namespace std;
 namespace coup {
     class Player {
-    protected:
+    private:
         string Name;
-        string Role;
+//        string Role;
         Game *GameName;
         int Coins;
 
     public:
-        Player(Game game, string name) {
-            this->Name=name;
-            this->GameName=game;
-            this->Coins=0;
-            this->Role=role;
-        }
+        Player(Game &Game, string Name);
         void income();
         void foreign_aid();
         int coins();
         void coup(Player play);
-        string role();
+        void role();
         ~Player();
 };}
