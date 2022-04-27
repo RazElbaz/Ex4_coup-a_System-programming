@@ -2,7 +2,7 @@
 
 namespace  coup{
     Captain::Captain(Game &Game, std::string Name) : Player(Game,Name){}
-    void Captain::Block(Player player) {}
-    void Captain::stealCoins(Player player) {}
+    void Captain::block(Player player) {}
+    void Captain::steal(Player player) {}
     Captain::~Captain() {}
 }

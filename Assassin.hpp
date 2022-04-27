@@ -5,5 +5,6 @@ namespace coup{
     public:
         Assassin(Game &Game, string Name);
         int Coins();
+        ~Assassin();
     };
 }

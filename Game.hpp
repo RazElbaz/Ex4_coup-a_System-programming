@@ -6,13 +6,13 @@ using namespace std;
 namespace coup{
     class Game{
     public:
-        Game(){}
+        Game();
         //Player Winner;
         vector<string> Players;
         int Turn;
         vector<string> players();
         string winner();
         string turn();
-        ~Game(){}
+        ~Game();
     };
 }

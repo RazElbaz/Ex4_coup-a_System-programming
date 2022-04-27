@@ -1,6 +1,8 @@
 #include "Game.hpp"
 #include <string>
 using namespace std;
+#pragma once
+
 namespace coup {
     class Player {
     private:
