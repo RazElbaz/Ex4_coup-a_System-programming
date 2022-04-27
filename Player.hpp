@@ -19,7 +19,6 @@ namespace coup {
         }
         void income();
         void foreign_aid();
-        void  coup();
         int coins();
         void coup(Player play);
         string role();
