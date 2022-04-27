@@ -4,8 +4,8 @@ namespace coup{
     class Captain: public Player{
     public:
         Captain(Game &Game, std::string Name);
-        void block(Player player);
-        void steal(Player player);
+        void block(Player &player);
+        void steal(Player &player);
         ~Captain();
     };
 }

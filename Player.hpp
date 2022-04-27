@@ -13,11 +13,11 @@ namespace coup {
 
     public:
         vector<string> Players;
-        Player(Game &Game, string Name);
+        Player(Game &Game, string &Name);
         void income();
         void foreign_aid();
         int coins();
-        void coup(Player play);
+        void coup(Player &play);
         void role();
         ~Player();
 };}
