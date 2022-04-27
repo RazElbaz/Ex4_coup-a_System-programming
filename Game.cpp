@@ -3,8 +3,8 @@
 
 namespace coup{
     Game::Game() {}
-    vector<string> Game::players(){return this->players();}
+    vector<string> Game::players(){return this->Players;}
     string Game::winner(){return "";}
-    string Game::turn(){ return "";}
+    string Game::turn(){return "";}
     Game::~Game() {}
 };

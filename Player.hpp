@@ -12,6 +12,7 @@ namespace coup {
         int Coins;
 
     public:
+        vector<string> Players;
         Player(Game &Game, string Name);
         void income();
         void foreign_aid();
