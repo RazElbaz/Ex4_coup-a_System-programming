@@ -103,3 +103,65 @@ TEST_CASE("Bad Coins"){
                 CHECK_FALSE(contessa2.coins()== i);
     }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Game game3{};
+Duke duke3{game3, "Raz1"};
+Assassin assassin3{game3, "Gal1"};
+Ambassador ambassador3{game3, "Benny1"};
+Captain captain3{game3, "Elbar1"};
+Contessa contessa3{game3, "Yehudit1"};
+Duke duke4{game3, "Raz2"};
+Assassin assassin4{game3, "Gal2"};
+Ambassador ambassador4{game3, "Benny2"};
+Captain captain4{game3, "Elbar2"};
+Contessa contessa4{game3, "Yehudit2"};
+
+
+TEST_CASE ("Players") {
+    vector <string> Players = game3.players();
+            CHECK(Players.at(0)=="Raz1");
+            CHECK(Players.at(1)== "Gal1");
+            CHECK(Players.at(2)== "Benny1");
+            CHECK(Players.at(3)== "Elbar1");
+            CHECK(Players.at(4)== "Yehudit1");
+}
+TEST_CASE("Bad Players"){
+    vector <string> Players = game3.players();
+    CHECK_THROWS(Players.at(1)="Raz2");
+    CHECK_THROWS(Players.at(0)= "Gal2");
+    CHECK_THROWS(Players.at(4)= "Benny2");
+    CHECK_THROWS(Players.at(1)= "Elbar2");
+    CHECK_THROWS(Players.at(2)= "Yehudit2");
+}
+TEST_CASE("Coins"){
+            CHECK_EQ(ambassador3.coins(),0);
+            CHECK_EQ(captain3.coins(),0);
+            CHECK_EQ(assassin3.coins(),0);
+            CHECK_EQ(duke3.coins(),0);
+            CHECK_EQ(contessa3.coins(),0);
+            CHECK_EQ(ambassador4.coins(),0);
+            CHECK_EQ(captain4.coins(),0);
+            CHECK_EQ(assassin4.coins(),0);
+            CHECK_EQ(duke4.coins(),0);
+            CHECK_EQ(contessa4.coins(),0);
+}
+
+TEST_CASE("There is no mistake in the list of the names"){
+    vector <string> Players_check={"Raz1", "Gal1", "Benny1", "Elbar1", "Yehudit1","Raz2", "Gal2", "Benny2", "Elbar2", "Yehudit2"};
+            CHECK_EQ(game3.players(),Players_check);
+}
+
+TEST_CASE("Bad Coins"){
+    for(int i=1; i<100; i++) {
+                CHECK_FALSE(ambassador3.coins() ==i);
+                CHECK_FALSE(captain3.coins() ==i);
+                CHECK_FALSE(assassin3.coins() == i);
+                CHECK_FALSE(duke3.coins() == i);
+                CHECK_FALSE(contessa3.coins()== i);
+                CHECK_FALSE(ambassador4.coins() ==i);
+                CHECK_FALSE(captain4.coins() ==i);
+                CHECK_FALSE(assassin4.coins() == i);
+                CHECK_FALSE(duke4.coins() == i);
+                CHECK_FALSE(contessa4.coins()== i);
+    }
+}
